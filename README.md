@@ -25,7 +25,7 @@ npm start
 - Linting
 
 ```
-npm lint
+npm run lint
 ```
 
 - test

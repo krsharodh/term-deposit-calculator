@@ -1,4 +1,4 @@
-import { interestPeriodsStrings, TermDeposit } from "./types";
+import { type interestPeriodsStrings, TermDeposit } from "./types";
 
 const compundingPeriods: Record<
   Exclude<interestPeriodsStrings, "maturity">,

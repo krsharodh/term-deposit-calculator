@@ -5,7 +5,7 @@ export interface TermDeposit {
   interestPaid: interestPeriodsStrings;
 }
 
-const enum interestPeriods {
+export const enum interestPeriods {
   monthly,
   quarterly,
   annually,
