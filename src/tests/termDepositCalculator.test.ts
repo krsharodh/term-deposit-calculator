@@ -45,4 +45,15 @@ describe("calculateFinalBalanceOfTermDeposit", () => {
     const finalBalance = calculateFinalBalanceOfTermDeposit(termDeposit);
     expect(finalBalance).toBe(10335);
   });
+
+  it("calculates term deposit for zero inputs", () => {
+    const termDeposit = {
+      startDepositAmount: 0,
+      interestRate: 0,
+      investmentTerm: 0,
+      interestPaid: "monthly",
+    } as TermDeposit;
+    const finalBalance = calculateFinalBalanceOfTermDeposit(termDeposit);
+    expect(finalBalance).toBe(0);
+  });
 });

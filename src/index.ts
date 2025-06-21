@@ -1,6 +1,7 @@
 import inquirer from "inquirer";
 import { TermDeposit } from "./types";
 import { calculateFinalBalanceOfTermDeposit } from "./termDepositCalculator";
+import { positiveNumberValidator } from "./validators";
 
 /**
  * Entry point of the app
@@ -13,17 +14,20 @@ const main = async () => {
       name: "startDepositAmount",
       message: "Enter start deposit amount",
       type: "number",
+      validate: async (value) => positiveNumberValidator(value),
     },
     {
       name: "interestRate",
       message: "Enter interest rate",
       type: "number",
       step: "any",
+      validate: async (value) => positiveNumberValidator(value),
     },
     {
       name: "investmentTerm",
       message: "Enter investment term in years",
       type: "number",
+      validate: async (value) => positiveNumberValidator(value),
     },
     {
       name: "interestPaid",
